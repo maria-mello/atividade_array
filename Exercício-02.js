@@ -5,20 +5,23 @@
 // Sua solução deve obedecer às seguintes restrições de implementação:
 // Para adicionar elementos aos sub-arrays pares e ímpares, utilize atribuição direta via índice (sem usar push()).
 
-let separarParimpar = (nums) => {
-    let pares =[]
-    let impares = []
+let nums = [1,2,3,4,5,6,7,8,9,10];
+function separarParImpar(nums){
+    let numsPares =[]
+    let numsImpares = []
     let indicePar = 0
     let indiceImpar = 0
 
     for (let i = 0; i < nums.length; i++){
         if (nums[i] % 2 === 0){
-            pares [indicePar] = nums [i]
+            numsPares [indicePar] = nums [i]
             indicePar++
         }else {
-            impares[indiceImpar] = nums[i]
+            numsImpares [indiceImpar] = nums[i]
             indiceImpar++
         }
     }
-    return 'Os números pares são: ${[pares]} e os ímpares são ${[impares]}'
+console.log(numsPares)
+console.log(numsImpares)
 }
+separarParImpar(nums)
